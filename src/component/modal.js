@@ -35,7 +35,7 @@ const ModalForm = ({ visible, onCancel, listField, setListField }) => {
 
     const onOk = () => {
         form.submit();
-        const newField = { ...form.getFieldsValue() };
+        const newField = { id: Math.trunc(Math.random() * 999), ...form.getFieldsValue() };
         const newListField = [...listField, newField];
         setListField(newListField);
     };
